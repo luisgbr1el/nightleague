@@ -1,0 +1,7 @@
+{
+  "primaryButton": {
+    "background": "#eeeeef",
+    "color": "#000000",
+     "boxShadow": "$md"
+  }
+}

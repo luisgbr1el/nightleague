@@ -1,6 +1,7 @@
 //import logo from './logo.svg';
 import './App.css';
 import * as React from 'react';
+import styles from './properties.json';
 
 // 1. import `NextUIProvider` component
 import { NextUIProvider, Button, createTheme, Text, Link, Grid } from '@nextui-org/react';
@@ -29,11 +30,7 @@ function App() {
             <Grid.Container gap={1}>
               <Grid>
                 <Link href="https://twitch.tv/nh_league" target="_blank">
-                  <Button auto shadow css={{ 
-                    background: '#eeeeef',
-                    color: '#000000',
-                    boxShadow: '$md', // shadows.md
-                  }}>
+                  <Button auto shadow css={ styles.primaryButton }>
                     Assistir
                   </Button>
                 </Link>
