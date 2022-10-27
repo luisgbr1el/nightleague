@@ -13,8 +13,7 @@ const darkTheme = createTheme({
 
 function App() {
   return (
-    <div className="App">
-      <body className="App-body">
+      <div className="subscribeDiv">
         <NextThemesProvider
           defaultTheme="dark"
           attribute="class"
@@ -27,10 +26,14 @@ function App() {
               textGradient: "45deg, #ffffff -20%, #eeeee4 50%",
             }}
             weight="bold">Night League</Text>
-            <Grid.Container gap={2}>
+            <Grid.Container gap={1}>
               <Grid>
                 <Link href="https://twitch.tv/nh_league" target="_blank">
-                  <Button shadow color="primary" auto>
+                  <Button auto shadow css={{ 
+                    background: '#eeeeef',
+                    color: '#000000',
+                    boxShadow: '$md', // shadows.md
+                  }}>
                     Assistir
                   </Button>
                 </Link>
@@ -43,8 +46,7 @@ function App() {
             </Grid.Container>
           </NextUIProvider>
         </NextThemesProvider>
-      </body>
-    </div>
+      </div>
   );
 }
 //bordered color="#eeeee4"
