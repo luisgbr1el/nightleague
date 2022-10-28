@@ -24,7 +24,6 @@
   display: flex;
   /* From https://css.glass */
   background: rgba(10, 10, 10, 0);
-  border-radius: 16px;
   backdrop-filter: blur(6.5px);
   -webkit-backdrop-filter: blur(6.5px);
 }

@@ -28,17 +28,17 @@ function App() {
           <Grid.Container gap={2} alignItems="center" justify="left" css={ styles.gridContainer }>
 
             <Grid>
-              <Image src={ logo } css={ styles.logo } />
+              <Link href="#">
+                <Image src={ logo } css={ styles.logo } />
+              </Link>
             </Grid>
             
           </Grid.Container>
-          <Grid.Container gap={2} alignItems="center" justify="right" css={ styles.gridContainer }>
+          <Grid.Container gap={3} alignItems="center" justify="right" css={ styles.gridContainer }>
                 
             <Grid>
-              <Link href="#scheduled">
-                <Button bordered color="#eeeee4" auto>
+              <Link href="#scheduled" css={{ color: "#eeeeef" }}>
                   Programação
-                </Button>
               </Link>
             </Grid>
   
@@ -49,19 +49,19 @@ function App() {
             </Grid>
 
             <Grid>
-              <Link href="https://instagram.com/nh_league" target="_blank" css={ styles.icon } >
+              <Link href="https://twitter.com/nh_league" target="_blank" css={ styles.icon } >
                 <FontAwesomeIcon icon={['fab', 'twitter']} className="header-icon" />
               </Link>
             </Grid>
 
             <Grid>
-              <Link href="https://instagram.com/nh_league" target="_blank" css={ styles.icon } >
+              <Link href="https://www.youtube.com/channel/UCelP6gmT-4meSX7ZDb18nEQ" target="_blank" css={ styles.icon } >
                 <FontAwesomeIcon icon={['fab', 'youtube']} className="header-icon" />
               </Link>
             </Grid>
 
             <Grid>
-              <Link href="https://instagram.com/nh_league" target="_blank" css={ styles.icon } >
+              <Link href="https://discord.gg/Jt4BQ8Na7F" target="_blank" css={ styles.icon } >
                 <FontAwesomeIcon icon={['fab', 'discord']} className="header-icon" />
               </Link>
             </Grid>
