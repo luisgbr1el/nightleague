@@ -2,6 +2,18 @@
   "primaryButton": {
     "background": "#eeeeef",
     "color": "#000000",
-     "boxShadow": "$md"
+    "boxShadow": "$md"
+  },
+  "razeImg": {
+    "width": "35%"
+  },
+  "logo": {
+    "width": "50px"
+  },
+  "icon": {
+    "color": "#eeeeef"
+  },
+  "gridContainer": {
+    "width": "50%"
   }
 }

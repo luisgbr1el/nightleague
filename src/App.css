@@ -2,9 +2,6 @@
 
 #root {
   font-family: 'Poppins', sans-serif;
-}
-
-.App {
   text-align: center;
 }
 
@@ -20,8 +17,24 @@
   }
 }
 
-.subscribeDiv {
-  background-color: #040b1b;
+.header {
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  /* From https://css.glass */
+  background: rgba(10, 10, 10, 0);
+  border-radius: 16px;
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+}
+
+.header-icon {
+  font-size: 30px;
+}
+
+.body {
+  background: linear-gradient(to top, #0a0a0a, #1c1c1c);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
