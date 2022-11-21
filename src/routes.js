@@ -1,6 +1,6 @@
 import App from './App'
-import Teams from './Teams'
-import Team from './Team'
+import Teams from './components/Teams'
+import Team from './components/Team'
 
 import {
   Routes as RoutesA, Route, BrowserRouter as Router } from "react-router-dom";

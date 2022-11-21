@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import './App.css';
+import '../assets/App.css';
 import * as React from 'react';
 //import styles from './properties.json';
 import Header from './Header.js';

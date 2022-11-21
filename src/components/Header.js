@@ -1,8 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../assets/logo.svg';
+import '../assets/App.css';
 //import Teams from './Teams.js'
 import * as React from 'react';
-import styles from './properties.json';
+import styles from '../properties.json';
 //import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import razeImg from './raze.png';
