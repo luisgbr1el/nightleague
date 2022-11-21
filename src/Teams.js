@@ -1,18 +1,17 @@
 //import logo from './logo.svg';
 import './App.css';
 import * as React from 'react';
-import styles from './properties.json';
+//import styles from './properties.json';
 import Header from './Header.js';
 //import ReactDOM from 'react-dom';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import razeImg from './raze.png';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-//import { BrowserRouter as Router } from "react-router-dom";
 //import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 // 1. import `NextUIProvider` component
-import { NextUIProvider, Button, createTheme, Text, Link, Grid/*, Image*/ } from '@nextui-org/react';
+import { NextUIProvider, /*Button,*/ createTheme, Text, Link/*, Grid, Image*/ } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 library.add(fab/*, faCheckSquare, faCoffee*/)
@@ -22,7 +21,7 @@ const darkTheme = createTheme({
 });
 
 
-function App() {
+function Teams() {
   return (
       <div className="App">
 
@@ -35,28 +34,7 @@ function App() {
           }}>
             <NextUIProvider>
 
-                  <Text h2 css={{
-                    textGradient: "45deg, #ffffff -20%, #eeeee4 50%", textAlign: "center"
-                    }}
-                  weight="bold">Night League 2022</Text>
-
-              <Grid.Container gap={1} justify="center">
-      
-                <Grid>
-                  <Link href="https://twitch.tv/nh_league" target="_blank">
-                    <Button auto shadow css={ styles.primaryButton }>
-                      Assistir
-                    </Button>
-                  </Link>
-                </Grid>
-                
-                <Grid>
-                  <Button disabled auto>
-                    Formulário
-                  </Button>
-                </Grid>
-                
-              </Grid.Container>
+            <Link href="/team/88244">Oi</Link>
               
             </NextUIProvider>
           </NextThemesProvider>
@@ -66,4 +44,4 @@ function App() {
   );
 }
 //bordered color="#eeeee4"
-export default App;
+export default Teams;
