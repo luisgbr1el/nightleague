@@ -8,10 +8,12 @@ import Header from './Header.js';
 // import razeImg from './raze.png';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+//import teamSchema from "../schemas/teamSchema.js";
+//import '../dbConnect.js'
 //import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 // 1. import `NextUIProvider` component
-import { NextUIProvider, /*Button,*/ createTheme, Text, Link/*, Grid, Image*/ } from '@nextui-org/react';
+import { NextUIProvider, /*Button,*/ createTheme, /*Text,*/ Link/*, Grid, Image*/ } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 library.add(fab/*, faCheckSquare, faCoffee*/)
@@ -21,7 +23,7 @@ const darkTheme = createTheme({
 });
 
 
-function Teams() {
+export default function Teams() {
   return (
       <div className="App">
 
@@ -34,7 +36,9 @@ function Teams() {
           }}>
             <NextUIProvider>
 
-            <Link href="/team/88244">Oi</Link>
+            <div className="teams">
+              <Link href="/team/133">Time</Link>
+          </div>
               
             </NextUIProvider>
           </NextThemesProvider>
@@ -44,4 +48,3 @@ function Teams() {
   );
 }
 //bordered color="#eeeee4"
-export default Teams;

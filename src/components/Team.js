@@ -21,7 +21,7 @@ const darkTheme = createTheme({
   type: 'dark',
 });
 
-function Team(props) {
+export default function Team(props) {
   let { id } = useParams();
   console.log(id);
   return (
@@ -46,4 +46,3 @@ function Team(props) {
   );
 }
 //bordered color="#eeeee4"
-export default Team;
