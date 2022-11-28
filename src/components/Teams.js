@@ -22,8 +22,51 @@ const darkTheme = createTheme({
   type: 'dark',
 });
 
+const Team = (props) => (
+  <Link className="btn btn-link" href={`/team/${props.team.TeamId}`}>{props.team.TeamName}</Link>
+);
 
 export default function Teams() {
+ const [teams, setTeams] = React.useState([]);
+ 
+ // This method fetches the records from the database.
+ React.useEffect(() => {
+   async function getTeams() {   
+    const apiUrl = process.env['apiUrl'] || process.env.API_URL
+    console.log(apiUrl)
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+ 
+     if (!response.ok) {
+       const message = `An error occurred: ${response.statusText}`;
+       window.alert(message);
+       return;
+     }
+ 
+     const teams = await response.json();
+     setTeams(teams);
+   }
+   getTeams();
+ 
+   return;
+ }, [teams.length])
+
+  // This method will map out the records on the table
+ function teamsList() {
+   return teams.map((team) => {
+     return (
+       <Team
+         team={team}
+         key={team.TeamId}
+       />
+     );
+   });
+ }
+
   return (
       <div className="App">
 
@@ -37,7 +80,7 @@ export default function Teams() {
             <NextUIProvider>
 
             <div className="teams">
-              <Link href="/team/133">Time</Link>
+              {teamsList()}
           </div>
               
             </NextUIProvider>
@@ -45,6 +88,5 @@ export default function Teams() {
         </div>
         
       </div>
-  );
+  )
 }
-//bordered color="#eeeee4"
