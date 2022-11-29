@@ -28,18 +28,14 @@ function App() {
 
         <Header />
         
-        <div className="body">
+        <div className="body" style={ styles.centerPoint }>
           <NextThemesProvider defaultTheme="dark" attribute="class"
             value={{
               dark: darkTheme.className
           }}>
             <NextUIProvider>
 
-                  <Text h2 css={{
-                    textGradient: "45deg, #ffffff -20%, #eeeee4 50%", textAlign: "center"
-                    }}
-                  weight="bold">Night League 2022</Text>
-
+                  <Text h2 css={ styles.mainTitle }>Night League 2022</Text>
               <Grid.Container gap={1} justify="center">
       
                 <Grid>

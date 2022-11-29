@@ -8,13 +8,36 @@
     "width": "35%"
   },
   "logo": {
-    "width": "50px",
-    "margin-left": "50px"
+    "width": "50px"
   },
   "icon": {
     "color": "#eeeeef"
   },
   "gridContainer": {
     "width": "50%"
+  },
+  "centerPoint": {
+    "margin": "0",
+    "top": "50%",
+    "left": "50%",
+    "transform": "translate(-50%, -50%)",
+    "position": "absolute"
+  },
+  "defaultDiv": {
+    "marginTop": "8vh"
+  },
+  "teamNameLink": {
+    "textGradient": "45deg, #ffffff -20%, #eeeee4 50%",
+    "textAlign": "center",
+    "fontSize": "16pt"
+  },
+  "linkToggle": {
+    "textGradient": "45deg, #ffffff -20%, #eeeee4 50%",
+    "textAlign": "center"
+  },
+  "mainTitle": {
+    "textGradient": "45deg, #ffffff -20%, #eeeee4 50%",
+    "textAlign": "center",
+    "fontWeight": "bold"
   }
 }
