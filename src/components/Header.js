@@ -1,5 +1,4 @@
 import logo from '../assets/logo.svg';
-import '../assets/App.css';
 //import Teams from './Teams.js'
 import * as React from 'react';
 import styles from '../properties.json';
@@ -14,60 +13,60 @@ import {
 //import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 // 1. import `NextUIProvider` component
-import { Link, Grid, Image } from '@nextui-org/react';
+import { Navbar, Image, Link } from "@nextui-org/react";
+//import { Layout } from "./Layout.js";
 
 library.add(fab/*, faCheckSquare, faCoffee*/)
 
 function Header() {
-  return(
-          <div className="header">
-          <Grid.Container gap={2} alignItems="center" justify="left" css={ styles.gridContainer }>
-
-            <Grid>
-              <Link href="/">
-                <Image src={ logo } css={ styles.logo } />
-              </Link>
-            </Grid>
-            
-          </Grid.Container>
-          <Grid.Container gap={3} alignItems="center" justify="right" css={ styles.gridContainer }>
-
-            <Grid>
-                <Link href="/teams" css={{ color: "#eeeeef" }}>Times</Link>     
-            </Grid>
-            
-            <Grid>
-              <Link href="/scheduled" css={{ color: "#eeeeef" }}>
-                  Programação
-              </Link>
-            </Grid>
   
-            <Grid>
-              <Link href="https://instagram.com/nh_league" target="_blank" css={ styles.icon } >
-                <FontAwesomeIcon icon={['fab', 'instagram']} className="header-icon" />
-              </Link>
-            </Grid>
-
-            <Grid>
-              <Link href="https://twitter.com/nh_league" target="_blank" css={ styles.icon } >
-                <FontAwesomeIcon icon={['fab', 'twitter']} className="header-icon" />
-              </Link>
-            </Grid>
-
-            <Grid>
-              <Link href="https://www.youtube.com/channel/UCelP6gmT-4meSX7ZDb18nEQ" target="_blank" css={ styles.icon } >
-                <FontAwesomeIcon icon={['fab', 'youtube']} className="header-icon" />
-              </Link>
-            </Grid>
-
-            <Grid>
-              <Link href="https://discord.gg/Jt4BQ8Na7F" target="_blank" css={ styles.icon } >
-                <FontAwesomeIcon icon={['fab', 'discord']} className="header-icon" />
-              </Link>
-            </Grid>
-
-          </Grid.Container> 
-        </div>
+  return(
+      <Navbar variant="sticky" maxWidth="xl">
+        <Navbar.Content showIn="xs">
+          <Navbar.Toggle aria-label="toggle navigation" />
+        </Navbar.Content>
+        <Navbar.Brand>
+          <Link href="/">
+            <Image src={ logo } css={ styles.logo } />
+          </Link>
+        </Navbar.Brand>
+        <Navbar.Content hideIn="xs">
+          <Navbar.Link href="/teams">Times</Navbar.Link>
+          <Navbar.Link href="/scheduled">Programação</Navbar.Link>
+          <Navbar.Link href="https://instagram.com/nh_league" target="_blank">
+            <FontAwesomeIcon icon={['fab', 'instagram']} className="header-icon" />
+          </Navbar.Link>
+          <Navbar.Link href="https://twitter.com/nh_league" target="_blank">
+            <FontAwesomeIcon icon={['fab', 'twitter']} className="header-icon" />
+          </Navbar.Link>
+          <Navbar.Link href="https://www.youtube.com/channel/UCelP6gmT-4meSX7ZDb18nEQ" target="_blank">
+            <FontAwesomeIcon icon={['fab', 'youtube']} className="header-icon" />
+          </Navbar.Link>
+          <Navbar.Link href="https://discord.gg/Jt4BQ8Na7F" target="_blank">
+            <FontAwesomeIcon icon={['fab', 'discord']} className="header-icon" />
+          </Navbar.Link>
+        </Navbar.Content>
+        <Navbar.Collapse>
+          <Navbar.CollapseItem>
+            <Link href="/teams" css={ styles.linkToggle }>Times</Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link href="/scheduled" css={ styles.linkToggle }>Programação</Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link href="https://instagram.com/nh_league" target="_blank" css={ styles.linkToggle }>Instagram</Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link href="https://twitter.com/nh_league" target="_blank" css={ styles.linkToggle }>Twitter</Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link href="https://www.youtube.com/channel/UCelP6gmT-4meSX7ZDb18nEQ" target="_blank" css={ styles.linkToggle }>YouTube</Link>
+          </Navbar.CollapseItem>
+          <Navbar.CollapseItem>
+            <Link href="https://discord.gg/Jt4BQ8Na7F" target="_blank" css={ styles.linkToggle }>Discord</Link>
+          </Navbar.CollapseItem>
+      </Navbar.Collapse>
+      </Navbar>   
     )
 }
 

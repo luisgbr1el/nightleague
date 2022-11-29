@@ -5,6 +5,12 @@
   text-align: center;
 }
 
+.App {
+  background: linear-gradient(to top, #0a0a0a, #1c1c1c);
+  min-height: 100vh;
+  overflow:auto; 
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -17,24 +23,11 @@
   }
 }
 
-.header {
-  position: absolute;
-  padding: 10px;
-  width: 100%;
-  display: flex;
-  /* From https://css.glass */
-  background: rgba(10, 10, 10, 0);
-  backdrop-filter: blur(6.5px);
-  -webkit-backdrop-filter: blur(6.5px);
-}
-
 .header-icon {
   font-size: 30px;
 }
 
 .body {
-  background: linear-gradient(to top, #0a0a0a, #1c1c1c);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
