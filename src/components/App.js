@@ -1,8 +1,8 @@
 //import logo from './logo.svg';
-import './assets/App.css';
+import '../assets/App.css';
 import * as React from 'react';
-import styles from './properties.json';
-import Header from './components/Header.js';
+import styles from '../properties.json';
+import Header from '../components/Header.js';
 //import ReactDOM from 'react-dom';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import razeImg from './raze.png';

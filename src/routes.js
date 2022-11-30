@@ -1,4 +1,4 @@
-import App from './App'
+import App from './components/App'
 import Teams from './components/Teams'
 import Team from './components/Team'
 import Scheduled from './components/Scheduled'
