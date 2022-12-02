@@ -103,7 +103,7 @@ export default function Teams() {
 
             <div className="teams">
               <Text h2 css={ styles.mainTitle }>Times</Text>
-              {teams.length > 0 ? teamsList() : <Loading size="lg" color="white" css={ styles.centerPoint } />}
+              {teams.length > 0 ? teamsList() : <Loading size="lg" color="white" css={ styles.loading } />}
             </div>
               
             </NextUIProvider>

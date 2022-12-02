@@ -28,7 +28,7 @@ function App() {
 
         <Header />
         
-        <div className="body" style={ styles.centerPoint }>
+        <div className="body" style={ styles.defaultDiv }>
           <NextThemesProvider defaultTheme="dark" attribute="class"
             value={{
               dark: darkTheme.className
