@@ -13,7 +13,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 //import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 // 1. import `NextUIProvider` component
-import { NextUIProvider, /*Button,*/ createTheme, Text, Link/*, Grid, Image*/, Loading } from '@nextui-org/react';
+import { NextUIProvider, /*Button,*/ createTheme, Card, Text, Link, Grid/*, Image*/, Loading } from '@nextui-org/react';
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 library.add(fab/*, faCheckSquare, faCoffee*/)
@@ -23,8 +23,29 @@ const darkTheme = createTheme({
 });
 
 const Team = (props) => (
-  <Link className="btn btn-link" href={`/team/${props.team.TeamId}`} css={ styles.teamNameLink }>
-    {props.team.TeamName}
+  <Link className="btn btn-link" href={`/team/${props.team.TeamId}`}>
+    <Card isHoverable variant="bordered" css={{ p: "$6", mw: "400px", backgroundColor: "#1c1c1c" }}>
+      <Card.Header>
+        <img
+          alt="team logo"
+          src={props.team.TeamLogoUrl}
+          width="34px"
+        />
+        <Grid.Container css={{ pl: "$6" }}>
+          <Grid xs={12}>
+            <Text h4 css={{ lineHeight: "$xs" }}>
+              {props.team.TeamName}
+            </Text>
+          </Grid>
+          <Grid xs={12}>
+            <Text css={{ color: "$accents8" }}>{props.team.GameName}</Text>
+          </Grid>
+        </Grid.Container>
+      </Card.Header>
+      {/*<Card.Body css={{ py: "$2" }}>
+        <Text>{props.team.GameName}</Text>
+      </Card.Body>*/}
+    </Card>
   </Link>
 );
 
@@ -83,7 +104,7 @@ export default function Teams() {
             <div className="teams">
               <Text h2 css={ styles.mainTitle }>Times</Text>
               {teams.length > 0 ? teamsList() : <Loading size="lg" color="white" css={ styles.centerPoint } />}
-          </div>
+            </div>
               
             </NextUIProvider>
           </NextThemesProvider>

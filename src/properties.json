@@ -24,7 +24,8 @@
     "position": "absolute"
   },
   "defaultDiv": {
-    "marginTop": "8vh"
+    "marginTop": "7vh",
+    "width": "95%"
   },
   "teamNameLink": {
     "textGradient": "45deg, #ffffff -20%, #eeeee4 50%",

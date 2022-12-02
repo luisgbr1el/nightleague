@@ -49,3 +49,13 @@
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .body {
+    width: 95%;
+  }
+
+  .spotifySection {
+    padding-top: 50px;
+  }
+}
