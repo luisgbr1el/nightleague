@@ -37,7 +37,7 @@ export default function Scheduled() {
             <NextUIProvider>
 
             <div className="scheduled">
-              <Text h2 css={ styles.mainTitle }>Programado</Text>
+              <Text h2 css={ styles.mainTitle }>PROGRAMADO</Text>
           </div>
               
             </NextUIProvider>

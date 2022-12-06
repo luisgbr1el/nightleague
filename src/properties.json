@@ -23,7 +23,10 @@
   },
   "defaultDiv": {
     "marginTop": "7vh",
-    "width": "95%"
+    "width": "95%",
+    "position": "relative",
+    "left": "50%",
+    "transform": "translateX(-50%)"
   },
   "teamNameLink": {
     "textGradient": "45deg, #ffffff -20%, #eeeee4 50%",
@@ -38,5 +41,11 @@
     "textGradient": "45deg, #ffffff -20%, #eeeee4 50%",
     "textAlign": "center",
     "fontWeight": "bold"
+  },
+  "teamDiv": {
+    "p": "$6",
+    "width": "300px",
+    "backgroundColor": "#1c1c1c",
+    "margin": "10px"
   }
 }

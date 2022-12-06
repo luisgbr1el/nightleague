@@ -24,7 +24,7 @@ const darkTheme = createTheme({
 
 const Team = (props) => (
   <Link className="btn btn-link" href={`/team/${props.team.TeamId}`}>
-    <Card isHoverable variant="bordered" css={{ p: "$6", mw: "400px", backgroundColor: "#1c1c1c" }}>
+    <Card isHoverable variant="bordered" css={styles.teamDiv}>
       <Card.Header>
         <img
           alt="team logo"
@@ -102,7 +102,7 @@ export default function Teams() {
             <NextUIProvider>
 
             <div className="teams">
-              <Text h2 css={ styles.mainTitle }>Times</Text>
+              <Text h2 css={ styles.mainTitle }>TIMES</Text>
               {teams.length > 0 ? teamsList() : <Loading size="lg" color="white" css={ styles.loading } />}
             </div>
               
