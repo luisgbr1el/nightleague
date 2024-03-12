@@ -10,7 +10,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
     "mongoose": "^6.12.7",
-    "next": "^13.5.1",
+    "next": "^13.5.6",
     "next-themes": "^0.2.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
